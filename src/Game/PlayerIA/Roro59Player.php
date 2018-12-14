@@ -41,28 +41,28 @@ class Roro59Player extends Player
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    ----------------------------------------------------
 
-        if ($this->result->getLastChoiceFor($this->opponentSide) == 0 )
+        if ($this->result->getLastChoiceFor($this->opponentSide) == "" )
         {
             return parent::friendChoice();
 
         }
 
-        if (9 == $this->result->getNbRound()) {
-            return parent::foeChoice();
-        }
+
         if ($this->result->getLastChoiceFor($this->opponentSide) == parent::foeChoice() )
         {
-            return parent::friendChoice();
+            return parent::foeChoice();
 
         }
         if ($this->result->getLastChoiceFor($this->opponentSide) == parent::friendChoice() )
         {
-            return parent::foeChoice();
+            return parent::friendChoice();
 
         }
-        //return $this->result->getLastChoiceFor($this->opponentSide);
 
 
+        if (8 == $this->result->getNbRound()) {
+            return parent::foeChoice();
+        }
         //return parent::friendChoice();
     }
  
