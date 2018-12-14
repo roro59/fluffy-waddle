@@ -50,7 +50,17 @@ class Roro59Player extends Player
         if (9 == $this->result->getNbRound()) {
             return parent::foeChoice();
         }
-        return $this->result->getLastChoiceFor($this->opponentSide);
+        if ($this->result->getLastChoiceFor($this->opponentSide) == parent::foeChoice() )
+        {
+            return parent::friendChoice();
+
+        }
+        if ($this->result->getLastChoiceFor($this->opponentSide) == parent::friendChoice() )
+        {
+            return parent::foeChoice();
+
+        }
+        //return $this->result->getLastChoiceFor($this->opponentSide);
 
 
         //return parent::friendChoice();
