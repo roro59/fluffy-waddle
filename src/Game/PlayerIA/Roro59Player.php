@@ -39,8 +39,7 @@ class Roro59Player extends Player
         // How to get the number of round      ?    $this->result->getNbRound()
         // -------------------------------------    -----------------------------------------------------
         // How can i display the result of each round ? $this->prettyDisplay()
-        // -------------------------------------    -----------------------------------------------------
-        $this->prettyDisplay();
+        // -------------------------------------    ----------------------------------------------------
 
         if ($this->result->getLastChoiceFor($this->opponentSide) == 0 )
         {
